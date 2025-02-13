@@ -8,3 +8,4 @@ duckduckgo-search
 fastapi
 uvicorn
 groq
+yfinance
