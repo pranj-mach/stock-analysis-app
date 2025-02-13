@@ -36,6 +36,7 @@ def format_stock_symbol(symbol):
     return symbol
 
 # ✅ Finance Analysis Agent (Yahoo Finance)
+
 finance_agent = Agent(
     name="Finance_Agent",
     model=Groq(id="llama-3.3-70b-versatile"),
@@ -117,7 +118,7 @@ def extract_stock_price_and_convert(result, exchange_rate, stock_symbol=""):
     return stock_data
 
 # ✅ Streamlit UI
-st.title("📊 AI-Powered Stock & News Dashboard")
+st.title("📊 AI-Powered India Stock & News Dashboard ")
 
 # ✅ Sidebar for User Selection
 st.sidebar.header("Select an Option")
@@ -125,9 +126,9 @@ query_type = st.sidebar.radio("What do you want?", ["Stock Analysis", "Latest Ne
 
 # ✅ User Input Fields
 if query_type == "Stock Analysis":
-    stock_symbol = st.text_input("Enter Stock Symbol (e.g., AAPL, TSLA)")
+    stock_symbol = st.text_input("Enter Stock Symbol (e.g., INFY, TCS)")
 elif query_type == "Latest News":
-    search_query = st.text_input("Enter a topic (e.g., Tesla stock news)")
+    search_query = st.text_input("Enter a topic (e.g., TataMotors stock news)")
 
 # ✅ Async Function to Run Agents
 async def run_agent(agent, input_text):
