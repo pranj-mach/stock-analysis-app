@@ -39,7 +39,7 @@ def format_stock_symbol(symbol):
 
 finance_agent = Agent(
     name="Finance_Agent",
-    model=Groq(id="llama-3.1-8b-instant"),
+    model=Groq(id="deepseek-r1-distill-llama-70b"),
     role="Analyze stock performance, trends, fundamental metrics, and SEC Filings.",
     tools=[
         YFinanceTools(
@@ -62,7 +62,7 @@ finance_agent = Agent(
 web_search_agent = Agent(
     name="Web_Agent",
     role="Find stock-related news and recent updates from the internet.",
-    model=Groq(id="llama-3.1-8b-instant"),
+    model=Groq(id="deepseek-r1-distill-llama-70b"),
     tools=[DuckDuckGo()],
     instructions=[
         "Always include sources.",
